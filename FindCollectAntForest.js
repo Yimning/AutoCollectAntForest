@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:21:58
+ * @LastEditTime: 2021-01-23 19:22:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -187,4 +187,16 @@ function ant_forest_task() {
         return true;
     });
 
+}
+
+// 从支付宝主页进入蚂蚁森林我的主页
+function enterMyMainPage() {
+    click("蚂蚁森林");
+    toast("进入蚂蚁森林我的主页");
+    sleep(3 * sleepTimes);
+    // // 收自己能量
+    // clickByTextDesc("克", 0);
+    // toast("自己能量收集完成");
+    // sleep(sleepTimes);
+    return true;
 }
