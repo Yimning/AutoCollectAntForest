@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:21:01
+ * @LastEditTime: 2021-01-23 19:21:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -149,4 +149,42 @@ function steal_friends_energy() {
     sleep(500);
     toast("循环结束准备退出");
     sleep(1000);
+}
+
+// 结束后返回主页面
+function whenComplete() {
+    toast("结束");
+    back();
+    sleep(1.5 * sleepTimes);
+    back();
+}
+
+//蚂蚁森林任务
+function ant_forest_task() {
+    threads.start(function () {
+        requestScreenCapture(false);
+        launchApp("支付宝");
+        toast("等待支付宝启动");
+        sleep(2 * sleepTimes);
+        // 打开首页
+        //click("首页");
+
+        // 进入蚂蚁森林主页,收集自己的能量
+        enterMyMainPage();
+        sleep(2 * sleepTimes);
+
+        // 收集自己的能量
+        steal_own_energy();
+
+        // 收集好友的能量
+        steal_friends_energy();
+
+        //结束后返回主页面
+        whenComplete();
+        sleep(sleepTimes);
+
+        exit();
+        return true;
+    });
+
 }
