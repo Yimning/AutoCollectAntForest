@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:22:44
+ * @LastEditTime: 2021-01-23 19:23:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -199,4 +199,18 @@ function enterMyMainPage() {
     // toast("自己能量收集完成");
     // sleep(sleepTimes);
     return true;
+}
+
+
+//程序主入口
+function mainEntrance() {
+
+    // 唤醒屏幕解锁
+    unlock();
+
+    // 执行蚂蚁森林任务----线程
+    ant_forest_task();
+
+    // 开启点击投射/录制功能 ----必要，体现全自动
+    startUp();
 }
