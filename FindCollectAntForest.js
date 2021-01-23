@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:19:59
+ * @LastEditTime: 2021-01-23 19:21:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -114,5 +114,39 @@ function steal_own_energy() {
             sleep(50);
         }
     toast("自己能量收集完成");
+    sleep(1000);
+}
+
+//循环收取好友能量
+function steal_friends_energy() {
+    toast("循环收取好友能量");
+    sleep(500);
+    while (text("找能量").findOne()&&collectOverTimes!=0) {
+        text("找能量").findOne().click();
+        sleep(1000);
+        if (className("android.view.View").text("startapp?appId=60000002&url=%2Fwww%2Fhome").exists()) {
+            toast("已全部收取完毕结束任务");
+            back();
+            exit();
+        }
+        for (var row = screen_height * 0.256; row < screen_height * 0.376; row += 80) {
+            for (var col = screen_width * 0.185; col < screen_width * 0.815; col += 80) {
+                click(col, row);
+                sleep(50);
+            }
+        }
+    
+        back();
+        toast("一个好友能量收取结束，开始下一个");
+        // if (text("返回我的森林").findOne()) {
+        //     toast("已全部收取完毕结束任务");
+        //     collectOverTimes=0;
+        // } 
+        collectOverTimes--;
+        if(collectOverTimes==0)   toast("已全部收取完毕结束任务");
+    }
+    back(); //返回自己森林主页
+    sleep(500);
+    toast("循环结束准备退出");
     sleep(1000);
 }
