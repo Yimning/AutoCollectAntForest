@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:18:29
+ * @LastEditTime: 2021-01-23 19:19:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -97,3 +97,10 @@ function unlock() {
         // click(180,1800);//7
     }
 }
+//开启点击投射/录制功能
+function startUp() {
+    sleep(1000);
+    click(720, 1800);
+}
+
+
