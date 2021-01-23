@@ -1,7 +1,7 @@
 /*
  * @Author: Yimning
  * @Date: 2021-01-22 16:27:03
- * @LastEditTime: 2021-01-23 19:19:15
+ * @LastEditTime: 2021-01-23 19:19:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\-Auto.js-\FindCollectAntForest.js
@@ -104,3 +104,15 @@ function startUp() {
 }
 
 
+//收取自己的能量
+function steal_own_energy() {
+    toast("收取自己的能量");
+    sleep(500);
+    for (var row = screen_height * 0.256; row < screen_height * 0.376; row += 80)
+        for (var col = screen_width * 0.185; col < screen_width * 0.815; col += 80) {
+            click(col, row);
+            sleep(50);
+        }
+    toast("自己能量收集完成");
+    sleep(1000);
+}
