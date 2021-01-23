@@ -1,7 +1,7 @@
 <!--
  * @Author: Yimning
  * @Date: 2021-01-23 19:08:35
- * @LastEditTime: 2021-01-23 19:14:01
+ * @LastEditTime: 2021-01-23 19:28:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Yimning\Desktop\脚本\各脚本开发\AutoCollectAntForest\README.md
@@ -15,6 +15,6 @@
 
 3、程序要想正确运行支付宝界面必须在首页，同时蚂蚁森林的入口要放到首页；
 
-4、
+4、var collectOverTimes = 30;   //遍历收取30个好友后结束
 
 5、
