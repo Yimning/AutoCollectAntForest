@@ -18,3 +18,4 @@
 4、var collectOverTimes = 30;   //遍历收取30个好友后结束 
 
 5、
+ 
