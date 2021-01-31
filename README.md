@@ -1,5 +1,5 @@
 <!--
- * @Author: Yimning
+ * @Author: Yimning 
  * @Date: 2021-01-23 19:08:35
  * @LastEditTime: 2021-01-31 14:35:50
  * @LastEditors: Please set LastEditors
@@ -15,6 +15,8 @@
 
 3、程序要想正确运行支付宝界面必须在首页，同时蚂蚁森林的入口要放到首页；
 
-4、var collectOverTimes = 30;   //遍历收取30个好友后结束
+4、var collectOverTimes = 30;   //遍历收取30个好友后结束 
 
 5、
+ 
+  
